@@ -1,23 +1,26 @@
 /*
 @author: Kevin Longinett
-@date: 6/29/26
-@purpose: This program displays the multiplication table for a user-entered integer from 0 to 12.
+@date: 7/6/26
+@purpose: This program displays a multiplication table for the numbers 1 through 10 using nested for loops.
 */
 
-// include the directives we need for this program
+// Include the directives we need for this program
 #include <iostream>
 using namespace std;
 
 int main() {
-    int number; // stores the integer entered by the user
 
-    cout << "Enter an integer: "; // prompt the user to enter an integer
-    cin >> number;
+    // Use the outer loop to control each row of the table
+    for (int row = 1; row <= 10; row++) {
 
-    // use a for loop to display the multiplication table from 0 to 12
-    cout << "Multiplication table for " << number << ":" << endl;
-    for (int i = 0; i <= 12; i++) {
-        cout << number << " x " << i << " = " << (number * i) << endl;
+        // Use the inner loop to calculate and display each product
+        for (int col = 1; col <= 10; col++) {
+            // Print the product of the current row and column
+            cout << row * col << " ";
+        }
+
+        // Move to the next line after each row is finished
+        cout << endl;
     }
 
     return 0;
